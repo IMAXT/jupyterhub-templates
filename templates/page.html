@@ -1,4 +1,7 @@
 {% extends "templates/page.html" %}
+{% block announcement %}
+<div class="container announcement"></div>
+{% endblock %}
 
 {% block stylesheet %}
 <link rel="stylesheet" href="{{ static_url("css/style.min.css") }}" type="text/css"/>
@@ -10,4 +13,24 @@
 <span id="jupyterhub-logo" class="pull-left">
     <a href="{{logo_url or base_url}}"><img src="{{static_url("extra-assets/images/cruk_jupyter.png") }}" alt='JupyterHub' class='jpy-logo' title='Home'/></a>
 </span>
+{% endblock %}
+
+
+{% block script %}
+{{ super() }}
+<script>
+$.get("/services/announcement/latest", function(data) {
+  var announcement = data["announcement"];
+  if(announcement) {
+    $(".announcement").html(`<div class="panel panel-warning">
+      <div class="panel-heading">
+        <h3 class="panel-title">Announcement</h3>
+      </div>
+      <div class="panel-body text-center announcement">
+        ${announcement}
+      </div>
+    </div>`);
+  }
+});
+</script>
 {% endblock %}
