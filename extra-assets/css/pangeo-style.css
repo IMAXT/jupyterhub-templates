@@ -9,6 +9,11 @@
     src: url("panton.light-caps.otf");
 }
 
+body {
+    background-image: linear-gradient(to top, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 1)), url(/hub/static/extra-assets/images/dna.jpg);
+    background-size: cover;
+}
+
 .pangeo h1 {
   color: #003B71;
   font-family: "Panton Black Caps";
@@ -30,8 +35,7 @@
 
 
 .navbar.navbar-default {
-  background: -webkit-linear-gradient(left, #D1C4E9, #512DA8); /* Chrome10+, Safari5.1+ */
-  background: linear-gradient(left, #D1C4E9, #512DA8);
+  background: transparent;
   border: None;
 }
 
@@ -63,3 +67,7 @@
     padding-top: 60px;
 }
 
+#jupyterhub-logo {
+    width: 65px;
+    overflow: hidden;
+}
