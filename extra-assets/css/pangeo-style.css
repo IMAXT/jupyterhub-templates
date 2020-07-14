@@ -12,6 +12,7 @@
 body {
     background-image: linear-gradient(to top, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 1)), url(/hub/static/extra-assets/images/dna.jpg);
     background-size: cover;
+    height: 100vh;
 }
 
 .pangeo h1 {
