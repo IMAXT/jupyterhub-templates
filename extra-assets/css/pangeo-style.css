@@ -70,4 +70,14 @@ body {
 #jupyterhub-logo {
     width: 65px;
     overflow: hidden;
+    display: none;
+}
+
+#logo-container {
+    text-align: center;
+    height: 40vh;
+}
+
+#login-main {
+    height: 40vh;
 }
