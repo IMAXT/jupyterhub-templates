@@ -82,3 +82,17 @@ body {
 #login-main {
     height: 40vh;
 }
+
+.navbar.navbar-default .navbar-nav>li>a, .navbar.navbar-default .navbar-text {
+    color: #000;
+}
+
+.navbar.navbar-default .navbar-nav>li>a:hover, .navbar.navbar-default .navbar-nav>li>a:focus {
+    background-color: #f0f0f0;
+}
+
+.navbar.navbar-default .navbar-nav>.open>a, .navbar.navbar-default .navbar-nav>.open>a:hover, .navbar.navbar-default .navbar-nav>.open>a:focus  {
+    background-color: #f0f0f0;
+}
+
+
